@@ -1,0 +1,23 @@
+
+<app-header></app-header>
+<app-nav></app-nav>
+<br><br>
+<br><br>
+<br><br><br>
+<br><br>
+<div class="chart-container" >
+
+    <select class="form-select w-auto d-inline"
+    style="background-color: rgba(0, 0, 0, 0); border: 0ch; font-size: 12px;" [(ngModel)]="days"
+    (change)="changeDays()">
+    <option selected="selected" [ngValue]="7">Last 7 Days</option>
+    <option [ngValue]="10">Last 10 Days</option>
+    <option [ngValue]="30">Last 30 Days</option>
+    <option [ngValue]="45">Last 45 Days</option>
+    <option [ngValue]="365">Last 365 Days</option>
+  </select>
+
+<canvas id="myChart" ></canvas>
+</div>
+<br><br><br><br><br><br><br>
+<app-footer></app-footer>

@@ -1,0 +1,75 @@
+<app-uheader> </app-uheader>
+<br>
+<br>
+<br>
+
+
+<ngx-ui-loader 
+fgsType="rectangle-bounce"
+fgsColor="#4169E1"
+text="Please Wait.."
+textColor="#F8F8FF"></ngx-ui-loader>
+<div ngxUiLoaderBlurred (blur)="3">
+
+
+    
+<div class="abc">
+   
+<div class="bootstrap-wrapper" >
+    <div class="row mt20">
+        <div class="col-md-6 offset-md-3"  >
+            <mat-card>
+                <mat-card-title class="text-center">
+                   <b>EXAM RESULT</b> 
+                    
+                </mat-card-title>
+                <mat-card-content class="text-center">
+                
+                    <br>
+                    <b> Correct Answers : {{result.mark}} </b>
+                    <br>
+                    <br>
+                    <b> Total Questions : {{result.total}} </b>
+                    <br>
+                    <br>
+                    <b> Percentage : {{result.percent}}%</b>
+                    <br>
+                    <br>
+                    <div *ngIf="result.status">
+                       <b> PASSED </b>
+                       <br>
+                        <img src="https://media.istockphoto.com/vectors/rainbow-brush-calligraphy-banner-vector-id1203814257?k=20&m=1203814257&s=170667a&w=0&h=BiBw79UUYPJXl2MVQwKWhkmh2FvDV2DDuF5Oyt5sykA=">
+                    
+                    </div>
+
+                    <div *ngIf="!result.status">
+                       <b> FAILED </b>
+                       <br>
+                       <img src="https://thumbs.dreamstime.com/b/better-luck-next-time-rubber-stamp-over-white-background-88415080.jpg" style="width: 500px; height:250px">
+
+                    </div>
+
+               
+            <br>
+
+       
+</mat-card-content>
+<mat-card-actions class="text-center">
+    <button mat-raised-button color="primary" routerLink="/listResults" class="noPrint"> Previous Results</button>
+    <button mat-raised-button color="success" routerLink="/home" class="noPrint">Home</button>
+</mat-card-actions>
+</mat-card>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br>
+<app-footer></app-footer>

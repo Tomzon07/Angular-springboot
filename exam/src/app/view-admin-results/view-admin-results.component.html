@@ -1,0 +1,75 @@
+<app-header></app-header>
+<app-nav></app-nav>
+<br><br><br><br><br><br>
+
+<body>
+    <div class="container">
+		<div class="table-responsive">
+			<div class="table-wrapper">
+				<div class="table-title">
+					<div class="row">
+						<div class="col-xs-6">
+							<h2>Exam <b>Results</b></h2>
+						</div>
+
+							<input type="text" class="search" placeholder="Search.."  [(ngModel)]="searchKey" (keyup)="search()">
+
+						<div class="btn-dwn">
+							<a (click)="downloadReasults()" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE2c4;</i> <span>Download</span></a>
+						</div>
+					</div>
+				</div>
+				<table class="table table-striped table-hover">
+					<thead>
+
+						<tr>
+							<th>User Id</th>
+							<th>Exam Id</th>
+                            <th>User Name</th>
+							<th>Exam Name</th>
+                            <th>Percentage (%)</th>
+							<th>Result</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+                    
+						<tr *ngFor="let result of results| paginate
+						: {
+							itemsPerPage: tableSize,
+							currentPage: page,
+							totalItems: count
+						  } ;
+					let i = index">
+                            <td>{{result.userId}}</td>
+							<td>{{result.examId}}</td>
+                            <td>{{result.userName}}</td>
+							<td>{{result.examName}}</td>
+                            <td>{{result.percentage|number:'2.1-1' }}</td>
+							<td><p *ngIf="result.status==1" style="color: green;">Passed</p><p *ngIf="result.status==0" style="color: red;">Failed</p></td>
+							
+						</tr>
+	
+					</tbody>
+			</table>
+			<div class="d-flex justify-content-center">
+				<pagination-controls
+				  previousLabel="Prev"
+				  nextLabel="Next"
+				  (pageChange)="onTableDataChange($event)"
+				>
+				</pagination-controls>
+			  </div>
+			</div>
+		</div></div>
+
+		<br>
+<br>
+
+<br>
+<br>
+<br>
+
+
+
+	<!-- <app-footer></app-footer>	 -->

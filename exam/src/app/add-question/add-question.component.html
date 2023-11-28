@@ -1,0 +1,133 @@
+<app-header></app-header>
+<app-nav></app-nav>
+
+
+<br><br><br><br><br><br>
+
+<div class="container pt-5 pb-3 text-center">
+    <h1>Add Question</h1>
+</div>
+
+<div class="card m-auto" style="width: 30rem;">
+
+    <div class="card-body">
+
+        <div class="container pt-2">
+
+            <form [formGroup]="addQuestionForm" class="row g-3" (ngSubmit)="addQuestion()">
+
+                <div class="col-12">
+                    <label for="name" class="form-label">Question</label>
+                    <input type="text" formControlName="question" class="form-control"
+                        [ngClass]="{'is-invalid':(addQuestionForm.controls['question'].touched||addQuestionForm.controls['question'].dirty) && addQuestionForm.controls['question'].errors}">
+
+                    <div *ngIf="(addQuestionForm.controls['question'].touched||addQuestionForm.controls['question'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="addQuestionForm.controls['question'].errors?.['required']">
+                           Question is required.
+                        </div>
+
+                    </div>
+                    <label for="name" class="text-danger pt-1"></label>
+                </div>
+
+
+                <div class="col-12">
+                    <label for="description" class="form-label">Option A</label>
+                    <input type="text" formControlName="option_A" class="form-control"
+                        [ngClass]="{'is-invalid':(addQuestionForm.controls['option_A'].touched||addQuestionForm.controls['option_A'].dirty) && addQuestionForm.controls['option_A'].errors}">
+
+                    <div *ngIf="(addQuestionForm.controls['option_A'].touched||addQuestionForm.controls['option_A'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="addQuestionForm.controls['option_A'].errors?.['required']">
+                            Option is required
+                        </div>
+
+                    </div>
+                    <label for="description" class="text-danger pt-1"></label>
+                </div>
+
+                <div class="col-12">
+                    <label for="description" class="form-label">Option B</label>
+                    <input type="text" formControlName="option_B" class="form-control"
+                        [ngClass]="{'is-invalid':(addQuestionForm.controls['option_B'].touched||addQuestionForm.controls['option_B'].dirty) && addQuestionForm.controls['option_B'].errors}">
+
+                    <div *ngIf="(addQuestionForm.controls['option_B'].touched||addQuestionForm.controls['option_B'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="addQuestionForm.controls['option_B'].errors?.['required']">
+                            Option is required.
+                        </div>
+
+                    </div>
+                    <label for="description" class="text-danger pt-1"></label>
+                </div>
+
+
+                <div class="col-12">
+                    <label for="description" class="form-label">Option C</label>
+                    <input type="text" formControlName="option_C" class="form-control"
+                        [ngClass]="{'is-invalid':(addQuestionForm.controls['option_C'].touched||addQuestionForm.controls['option_C'].dirty) && addQuestionForm.controls['option_C'].errors}">
+
+                    <div *ngIf="(addQuestionForm.controls['option_C'].touched||addQuestionForm.controls['option_C'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="addQuestionForm.controls['option_C'].errors?.['required']">
+                            Option is required.
+                        </div>
+
+                    </div>
+                    <label for="description" class="text-danger pt-1"></label>
+                </div>
+
+
+                <div class="col-12">
+                    <label for="description" class="form-label">Option D</label>
+                    <input type="text" formControlName="option_D" class="form-control"
+                        [ngClass]="{'is-invalid':(addQuestionForm.controls['option_D'].touched||addQuestionForm.controls['option_D'].dirty) && addQuestionForm.controls['option_D'].errors}">
+
+                    <div *ngIf="(addQuestionForm.controls['option_D'].touched||addQuestionForm.controls['option_D'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="addQuestionForm.controls['option_D'].errors?.['required']">
+                            Option is required.
+                        </div>
+
+                    </div>
+                    <label for="description" class="text-danger pt-1"></label>
+                </div>
+
+
+                <div class="col-12">
+                    <label for="description" class="form-label">Answer</label>
+                 
+                        <select class="form-select" aria-label="Default select example" formControlName="answer" >
+                            
+                            <option value="optionsA">optionsA</option>
+                            <option value="optionsB">optionsB</option>
+                            <option value="optionsC">optionsC</option>
+                            <option value="optionsD">optionsD</option>
+                          </select>
+
+
+                    <div *ngIf="(addQuestionForm.controls['answer'].touched||addQuestionForm.controls['answer'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="addQuestionForm.controls['answer'].errors?.['required']">
+                            Answer is required.
+                        </div>
+
+                    </div>
+                    <label for="description" class="text-danger pt-1"></label>
+                </div>
+
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<app-uheader></app-uheader>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+
+            <div class="col-md-8">
+
+                <mat-card *ngFor="let q of questions; let i=index" class="mt10" style="margin-top: 40px;">
+
+                    <mat-card-content>
+
+                        <p><b>Q{{i+1}}) </b><span class="ml20" [innerHTML]="q.question"></span></p>
+
+                        <mat-divider></mat-divider>
+                        <br />
+
+                        <div class="row mt20">
+
+                            <div class="col-md-6">
+
+                                <input type="radio" value='optionsA' [name]="i" (change)="onChange($event,q.questionId)" />         {{q.optionsA}}
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" value='optionsB' [name]="i" (change)="onChange($event,q.questionId)"
+                                >      {{q.optionsB}}
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" value='optionsC' [name]="i" (change)="onChange($event,q.questionId)"
+                               >       {{q.optionsC}}
+                            </div>
+
+                            <div class="col-md-6">
+                                <input type="radio" value='optionsD' [name]="i" (change)="onChange($event,q.questionId)"
+                               >    {{q.optionsD}}
+                            </div>
+                            <br>
+
+
+                        </div>
+
+                    </mat-card-content>
+                </mat-card>
+
+                <div class="container text-center " style="margin-bottom: 20px; margin-top:20px;">
+                    <button mat-raised-button color="primary" (click)="submitExam()">Submit</button>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <mat-card style="margin-top:40px">
+                    <mat-card-header>
+                        <mat-card-title>
+                            Progress
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            Exam will automatically sumbitted when timer reaches to <b>0.0</b>
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <h1 class="text-center">{{getFormattedTime()}} </h1>
+                        <mat-spinner mode="determinate" [value]="(timer/(this.questions.length *1 * 60))*100"
+                            style="margin: auto;"></mat-spinner>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

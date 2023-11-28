@@ -1,0 +1,43 @@
+
+.regbody{
+    height:600px;
+    background: #000000;
+	background: -webkit-linear-gradient(to right, #363636, #141111);
+	background: linear-gradient(to right, #474747, #232130);
+    color: rgb(255, 255, 255);
+    background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+            border-color: #000000;
+}
+.regbody input{
+    height: 55px;
+    margin-bottom: 10px;
+    background-color: #ff416d00;
+    color: rgb(255, 255, 255);
+}
+::placeholder{
+    color: white;
+}
+.regbody button{
+    height: 55px;
+    width: 100%;
+    background-color: #47111d00;
+    border:1px solid white;
+}
+.regbody button:hover{
+background-color:#000000;
+}
+
+.body{
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.300) 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.780) 100%),url("https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    margin-top: -120px;
+    width:100%;
+    height: 100%;
+    display: flex;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover  
+}

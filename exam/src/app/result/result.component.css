@@ -1,0 +1,18 @@
+.bootstrap-wrapper{
+    margin-top: 100px;
+    color: rgb(204, 204, 204);
+}
+
+@media print{
+    .noPrint{
+        visibility: hidden;
+    }
+
+.abc{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: rgb(15, 15, 15);
+    box-shadow: 20px;
+}    
+}
+

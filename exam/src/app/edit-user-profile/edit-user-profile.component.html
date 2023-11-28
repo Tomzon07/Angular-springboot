@@ -1,0 +1,224 @@
+<app-uheader></app-uheader>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="card m-auto pb-5" style="width: 50rem;">
+    <div class="container pt-5 pb-3 text-center">
+        <h1>Enter Details</h1>
+    </div>
+
+    <div class="card-body">
+
+        <div class="container pt-2">
+
+            <form [formGroup]="editContactForm" class="row g-3" (ngSubmit)="editContact()">
+
+                <div class="col-12">
+                    <label for="name" class="form-label">First Name</label>
+                    <input type="text" formControlName="firstName" class="form-control"
+                        [ngClass]="{'is-invalid':(editContactForm.controls['firstName'].touched||editContactForm.controls['firstName'].dirty) && editContactForm.controls['firstName'].errors}">
+
+                    <div *ngIf="(editContactForm.controls['firstName'].touched||editContactForm.controls['firstName'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editContactForm.controls['firstName'].errors?.['required']">
+                            firstName is required.
+                        </div>
+
+                    </div>
+                    <label for="firstName" class="text-danger pt-1"></label>
+                </div>
+
+
+
+                <div class="col-12">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" formControlName="lastName" class="form-control"
+                        [ngClass]="{'is-invalid':(editContactForm.controls['lastName'].touched||editContactForm.controls['lastName'].dirty) && editContactForm.controls['lastName'].errors}">
+
+                    <div *ngIf="(editContactForm.controls['lastName'].touched||editContactForm.controls['lastName'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editContactForm.controls['lastName'].errors?.['required']">
+                            lastName is required.
+                        </div>
+
+                    </div>
+                    <label for="lastName" class="text-danger pt-1"></label>
+                </div>
+
+        
+                <div class="col-12">
+                    <label class="form-label">Dob</label>
+                    <input type="date" formControlName="dob" class="form-control"
+                        [ngClass]="{'is-invalid':(editContactForm.controls['dob'].touched||editContactForm.controls['dob'].dirty) && editContactForm.controls['dob'].errors}">
+
+                    <div *ngIf="(editContactForm.controls['dob'].touched||editContactForm.controls['dob'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editContactForm.controls['dob'].errors?.['required']">
+                            dob is required.
+                        </div>
+
+                    </div>
+                    <label for="dob" class="text-danger pt-1"></label>
+                </div>
+
+
+
+
+
+                <div class="col-12">
+                    <label class="form-label"> Email</label>
+                    <input type="text" formControlName="email" class="form-control"
+                        [ngClass]="{'is-invalid':(editContactForm.controls['email'].touched||editContactForm.controls['email'].dirty) && editContactForm.controls['email'].errors}">
+
+                    <div *ngIf="(editContactForm.controls['email'].touched||editContactForm.controls['email'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editContactForm.controls['email'].errors?.['required']">
+                            Email is required.
+                        </div>
+
+                    </div>
+                    <label for="email" class="text-danger pt-1"></label>
+                </div>
+
+
+                <div class="col-12">
+                    <label class="form-label">Phone</label>
+                    <input type="number" formControlName="phone" class="form-control"
+                        [ngClass]="{'is-invalid':(editContactForm.controls['phone'].touched||editContactForm.controls['phone'].dirty) && editContactForm.controls['phone'].errors}">
+
+                    <div *ngIf="(editContactForm.controls['phone'].touched||editContactForm.controls['phone'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editContactForm.controls['phone'].errors?.['required']">
+                            Phone is required.
+                        </div>
+
+                    </div>
+                    <label for="phone" class="text-danger pt-1"></label>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Address</label>
+                    <input type="text" formControlName="address" class="form-control"
+                        [ngClass]="{'is-invalid':(editContactForm.controls['address'].touched||editContactForm.controls['address'].dirty) && editContactForm.controls['address'].errors}">
+
+                    <div *ngIf="(editContactForm.controls['address'].touched||editContactForm.controls['address'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editContactForm.controls['address'].errors?.['required']">
+                            address is required.
+                        </div>
+
+                    </div>
+                    <label for="address" class="text-danger pt-1"></label>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Zip Code</label>
+                    <input type="number" formControlName="zipCode" class="form-control"
+                        [ngClass]="{'is-invalid':(editContactForm.controls['zipCode'].touched||editContactForm.controls['zipCode'].dirty) && editContactForm.controls['zipCode'].errors}">
+
+                    <div *ngIf="(editContactForm.controls['zipCode'].touched||editContactForm.controls['zipCode'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editContactForm.controls['zipCode'].errors?.['required']">
+                            zipCode is required.
+                        </div>
+
+                    </div>
+                    <label for="zipCode" class="text-danger pt-1"></label>
+                </div>
+
+
+
+
+
+                <div class="col-12">
+                    <label class="form-label">State</label>
+                    <input type="text" formControlName="state" class="form-control"
+                        [ngClass]="{'is-invalid':(editContactForm.controls['state'].touched||editContactForm.controls['state'].dirty) && editContactForm.controls['state'].errors}">
+
+                    <div *ngIf="(editContactForm.controls['state'].touched||editContactForm.controls['state'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editContactForm.controls['state'].errors?.['required']">
+                            state is required.
+                        </div>
+
+                    </div>
+                    <label for="state" class="text-danger pt-1"></label>
+                </div>
+
+
+                <div class="col-12">
+                    <label class="form-label">Country</label>
+                    <input type="text" formControlName="country" class="form-control"
+                        [ngClass]="{'is-invalid':(editContactForm.controls['country'].touched||editContactForm.controls['country'].dirty) && editContactForm.controls['country'].errors}">
+
+                    <div *ngIf="(editContactForm.controls['country'].touched||editContactForm.controls['country'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editContactForm.controls['country'].errors?.['required']">
+                            country is required.
+                        </div>
+
+                    </div>
+                    <label for="country" class="text-danger pt-1"></label>
+                </div>
+
+
+      
+<!-- 
+                <div class="col-12">
+                    <label class="form-label">Designation</label>
+                    <input type="text" formControlName="work" class="form-control"
+                        [ngClass]="{'is-invalid':(editContactForm.controls['work'].touched||editContactForm.controls['work'].dirty) && editContactForm.controls['work'].errors}">
+
+                    <div *ngIf="(editContactForm.controls['work'].touched||editContactForm.controls['work'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editContactForm.controls['work'].errors?.['required']">
+                            designation is required.
+                        </div>
+
+                    </div>
+                    <label for="work" class="text-danger pt-1"></label>
+                </div>
+         
+
+
+
+
+
+                <div class="col-12">
+                    <label class="form-label">Place</label>
+                    <input type="text" formControlName="place" class="form-control"
+                        [ngClass]="{'is-invalid':(editContactForm.controls['place'].touched||editContactForm.controls['place'].dirty) && editContactForm.controls['place'].errors}">
+
+                    <div *ngIf="(editContactForm.controls['place'].touched||editContactForm.controls['place'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editContactForm.controls['place'].errors?.['required']">
+                            place is required.
+                        </div>
+
+                    </div>
+                    <label for="place" class="text-danger pt-1"></label>
+                </div> -->
+
+                <div class="col-8">
+                    <button type="submit" class="btn btn-primary" >Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

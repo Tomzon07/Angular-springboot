@@ -1,0 +1,65 @@
+<app-header></app-header>
+<app-nav></app-nav>
+<br><br><br><br><br><br>
+
+
+<div class="card m-auto" style="width: 30rem;">
+
+    <div class="card-body">
+
+        <div class="container pt-2">
+            <div class="container pt-5 pb-3 text-center">
+                <h1><b>Add Exam</b></h1>
+            </div>
+
+            <form [formGroup]="addExamForm" class="row g-3" (ngSubmit)="addExam()">
+
+                <div class="col-12">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" formControlName="name" class="form-control"
+                        [ngClass]="{'is-invalid':(addExamForm.controls['name'].touched||addExamForm.controls['name'].dirty) && addExamForm.controls['name'].errors}">
+
+                    <div *ngIf="(addExamForm.controls['name'].touched||addExamForm.controls['name'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="addExamForm.controls['name'].errors?.['required']">
+                            Name is required.
+                        </div>
+
+                    </div>
+                    <label for="name" class="text-danger pt-1"></label>
+                </div>
+
+
+                <div class="col-12">
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" formControlName="description" class="form-control"
+                        [ngClass]="{'is-invalid':(addExamForm.controls['description'].touched||addExamForm.controls['description'].dirty) && addExamForm.controls['description'].errors}">
+
+                    <div *ngIf="(addExamForm.controls['description'].touched||addExamForm.controls['description'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="addExamForm.controls['description'].errors?.['required']">
+                            Description is required.
+                        </div>
+
+                    </div>
+                    <label for="description" class="text-danger pt-1"></label>
+                </div>
+
+
+              
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-dark">Add</button>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-outline-dark" routerLink="/listexams">Prev</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<app-footer></app-footer>

@@ -1,0 +1,127 @@
+
+<app-header></app-header>
+
+<br><br><br><br><br><br>
+
+
+
+<div class="card m-auto" style="width: 50rem;">
+    <div class="container pt-5 pb-3 text-center">
+        <h1>Edit Question</h1>
+    </div>
+    
+
+    <div class="card-body">
+
+        <div class="container pt-2">
+
+            <form [formGroup]="editQuestionForm" class="row g-3" (ngSubmit)="editQuesiton()">
+
+                <div class="col-12">
+                    <label for="name" class="form-label">Question</label>
+                    <input type="text" formControlName="question" class="form-control"
+                        [ngClass]="{'is-invalid':(editQuestionForm.controls['question'].touched||editQuestionForm.controls['question'].dirty) && editQuestionForm.controls['question'].errors}">
+
+                    <div *ngIf="(editQuestionForm.controls['question'].touched||editQuestionForm.controls['question'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editQuestionForm.controls['question'].errors?.['required']">
+                           Question is required.
+                        </div>
+
+                    </div>
+                    <label for="name" class="text-danger pt-1"></label>
+                </div>
+
+
+                <div class="col-12">
+                    <label for="description" class="form-label">Option A</label>
+                    <input type="text" formControlName="option_A" class="form-control"
+                        [ngClass]="{'is-invalid':(editQuestionForm.controls['option_A'].touched||editQuestionForm.controls['option_A'].dirty) && editQuestionForm.controls['option_A'].errors}">
+
+                    <div *ngIf="(editQuestionForm.controls['option_A'].touched||editQuestionForm.controls['option_A'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editQuestionForm.controls['option_A'].errors?.['required']">
+                            Option is required
+                        </div>
+
+                    </div>
+                    <label for="description" class="text-danger pt-1"></label>
+                </div>
+
+                <div class="col-12">
+                    <label for="description" class="form-label">Option B</label>
+                    <input type="text" formControlName="option_B" class="form-control"
+                        [ngClass]="{'is-invalid':(editQuestionForm.controls['option_B'].touched||editQuestionForm.controls['option_B'].dirty) && editQuestionForm.controls['option_B'].errors}">
+
+                    <div *ngIf="(editQuestionForm.controls['option_B'].touched||editQuestionForm.controls['option_B'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editQuestionForm.controls['option_B'].errors?.['required']">
+                            Option is required.
+                        </div>
+
+                    </div>
+                    <label for="description" class="text-danger pt-1"></label>
+                </div>
+
+
+                <div class="col-12">
+                    <label for="description" class="form-label">Option C</label>
+                    <input type="text" formControlName="option_C" class="form-control"
+                        [ngClass]="{'is-invalid':(editQuestionForm.controls['option_C'].touched||editQuestionForm.controls['option_C'].dirty) && editQuestionForm.controls['option_C'].errors}">
+
+                    <div *ngIf="(editQuestionForm.controls['option_C'].touched||editQuestionForm.controls['option_C'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editQuestionForm.controls['option_C'].errors?.['required']">
+                            Option is required.
+                        </div>
+
+                    </div>
+                    <label for="description" class="text-danger pt-1"></label>
+                </div>
+
+
+                <div class="col-12">
+                    <label for="description" class="form-label">Option D</label>
+                    <input type="text" formControlName="option_D" class="form-control"
+                        [ngClass]="{'is-invalid':(editQuestionForm.controls['option_D'].touched||editQuestionForm.controls['option_D'].dirty) && editQuestionForm.controls['option_D'].errors}">
+
+                    <div *ngIf="(editQuestionForm.controls['option_D'].touched||editQuestionForm.controls['option_D'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editQuestionForm.controls['option_D'].errors?.['required']">
+                            Option is required.
+                        </div>
+
+                    </div>
+                    <label for="description" class="text-danger pt-1"></label>
+                </div>
+
+
+                <div class="col-12">
+                    <label for="description" class="form-label">Answer</label>
+                    <input type="text" formControlName="answer" class="form-control"
+                        [ngClass]="{'is-invalid':(editQuestionForm.controls['answer'].touched||editQuestionForm.controls['answer'].dirty) && editQuestionForm.controls['answer'].errors}">
+                    <div *ngIf="(editQuestionForm.controls['answer'].touched||editQuestionForm.controls['answer'].dirty)"
+                        class="is-invalid">
+
+                        <div class="text-danger" *ngIf="editQuestionForm.controls['answer'].errors?.['required']">
+                            Answer is required.
+                        </div>
+
+                    </div>
+                    <label for="description" class="text-danger pt-1"></label>
+                </div>
+
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

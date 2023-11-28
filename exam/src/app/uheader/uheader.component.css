@@ -1,0 +1,91 @@
+.header {
+    position: fixed;
+    top: 0%;
+    z-index: 10;
+    /* background-image: linear-gradient(to bottom right,#162338, #2d3542); */
+    /* background-image: linear-gradient(to bottom right, #f5f4f5, #ffffff); */
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 5px;
+    height: 50px;
+    width: 100%;
+    color: rgb(146, 146, 146);
+    background: linear-gradient(to right, #11134d, #1c2f5a);
+}
+
+
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul {
+
+    list-style-type: none;
+    position: fixed;
+    top: 0%;
+  
+    background: linear-gradient(to right, #1c1e47, #1c2f5a);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 5px;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+   
+}
+
+.search {
+    margin-left: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 60%;
+    border: 3px solid #292b2b6b;
+    border-right: none;
+    padding: 5px;
+    height: 50%;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #dddddd;
+}
+
+.searchTerm:focus {
+    color: #151b1c;
+}
+
+.searchButton {
+    width: 40px;
+    height: 40px;
+    /* height: 100%; */
+    border: 1px solid #0b0b0b; background-image: linear-gradient(to bottom right, #f5f4f5, #ffffff);
+    background: #7a7b7b;
+    text-align: center;
+    color: rgb(204, 198, 198);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.drop-down-virtual-wrapper {
+    height: fit-content;
+}

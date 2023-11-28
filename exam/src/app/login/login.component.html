@@ -1,0 +1,103 @@
+
+<body class="body" >
+
+<div class="form">
+<div class="container" id="container" style="margin-top: 200px;">
+
+
+	<div class="form-container sign-up-container"  >
+	
+	</div>
+	<div class="form-container sign-in-container ">
+
+
+		<form [formGroup]="loginForm" class="row g-3" (ngSubmit)="login()">
+
+
+			<div class="col-12">
+				<h1>Sign in</h1>
+				<br>
+				<input type="text" placeholder="Email" formControlName="username" class="form-control"
+					[ngClass]="{'is-invalid':(loginForm.controls['username'].touched||loginForm.controls['username'].dirty) && loginForm.controls['username'].errors}">
+
+				<div *ngIf="(loginForm.controls['username'].touched||loginForm.controls['username'].dirty)"
+					class="is-invalid">
+					<div class="text-danger" *ngIf="loginForm.controls['username'].errors?.['required']">
+						Email is required.
+					</div>
+				</div>
+				<label for="username" class="text-danger pt-1"></label>
+			</div>
+
+
+
+
+			<div class="col-md-12">
+				
+				<input type="password"  placeholder="Password" formControlName="password" class="form-control"
+					[ngClass]="{'is-invalid':(loginForm.controls['password'].touched||loginForm.controls['password'].dirty) && loginForm.controls['password'].errors}">
+
+				<div *ngIf="(loginForm.controls['password'].touched||loginForm.controls['password'].dirty)" class="is-invalid">
+
+					<div class="text-danger" *ngIf="loginForm.controls['password'].errors?.['required']">
+						Password is required.
+					</div>
+
+				</div>
+
+			</div>
+			<a (click)="openModal()">Forgot your password?</a>
+			<div class="col-12">
+				<button type="submit" class="btn btn-primary">Login</button>
+			</div>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp" routerLink="/registration">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- 
+
+<button type="button" class="btn btn-info btn-lg" (click)="openModal()">click to open</button> -->
+
+
+    <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+         <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                     <div class="modal-header">
+						<h2 class="modal-title" id="modal-basic-title">Do you want to update your Password?</h2>
+						<button type="button" class="btn btn-primary btn-block mb-4" aria-label="Close" id="saveClose"
+							(click)="onCloseHandled()">
+							X
+						</button>
+                         </div>
+                <div class="modal-body">
+					<form [formGroup]="changePasswordForm" (ngSubmit)="sendResetPswrdLink()">
+						<div class="form-outline mb-4">
+							<input type="text" id="form5Example2" class="form-control" formControlName="email" />
+							<label class="form-label" for="form5Example2">Provide your Email</label>
+						</div>
+						<button type="submit" class="btn btn-primary btn-block mb-4">Send Link</button>
+					</form>
+                         </div>
+    
+             </div>
+ </div>
+
+
+
+
+</div>
+</body>

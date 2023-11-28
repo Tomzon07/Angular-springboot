@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic);
+
+
+
+.transition {
+  transition: .3s cubic-bezier(.3, 0, 0, 1.1)
+}
+
+.card {
+  background-color: rgb(185, 192, 204);
+  height: 350px;
+  width: 280px;
+  
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.664);
+  overflow: hidden;
+
+  
+}
+
+.card:hover {
+  box-shadow: 0px 30px 60px rgba(0,0,0,0.2);
+  height: 430px;
+  width: 330px;
+}
+
+.card_circle {
+  height: 400px;
+  width: 450px;
+  background: url(http://widewallpaper.info/wp-content/uploads/2015/11/Nature-HD-Wallpaper-1080p.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 45%;
+  margin-left: -75px;
+  margin-top: -270px;
+  background:linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.200) 100%), url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80.jpeg");  
+
+}
+
+.card:hover .card_circle {
+  border-radius: 0;
+  margin-top: -130px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 190px;
+  z-index: 9999;
+  font-size: 30px;
+  color: #10314e;
+  width: 100%;
+  font-weight: bold;
+  font-family: 'Times New Roman', serif;
+}
+
+h2 small {
+  font-weight: light;
+  font-size: 65%;
+  color: rgba(0,0,0,0.5);
+}
+
+.card:hover h2 {
+  margin-top: 10px;
+  color: rgb(33, 19, 97);
+}
+
+.card:hover h2 small {
+  color:rgb(19, 31, 100);
+}
+
+.cta-container {
+  text-align: center;
+  margin-top: 290px;
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  font-family: 'Noto Sans', serif;
+}
+
+.cta {
+  color: #fff;
+  border: 2px solid #2196F3;
+  background-color: #04233d;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card:hover .cta-container {
+  margin-top: 320px;
+
+}
+.cardflex{
+  display: flex;
+  flex-direction: row;
+  margin-top: 8%;
+  
+
+}
+.gap{
+  margin-left: 4%;
+}
+h1{
+  font-size:xx-large;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-left: 17%;
+  font-family: serif;
+  color: rgb(19, 19, 121);
+
+}
+mat-card{
+
+  width: 5000px;
+
+margin-top: 0%;
+  
+}
+
+.backgr{
+background-color: rgb(253, 253, 253);
+}
+

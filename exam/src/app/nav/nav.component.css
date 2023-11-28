@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+  body {
+    font-family: "Lato", sans-serif;
+    
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 4.5%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;;
+    /* background-color: #111; */
+    overflow-x: hidden;
+    padding-top: 70px;
+    background: linear-gradient(to right, #0b0d41, #0d1c41);
+    
+  
+  }
+  
+  .icons {
+    margin-bottom: 30px;
+  }
+  
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #d3d3d3;
+    display: block;
+    margin-top: 50px;
+  }
+  
+  .sidebar a:hover {
+    color: #ffffff;
+  }
+  
+  .main {
+    margin-left: 160px;
+     /*
+     Same as the width of the sidenav */
+     padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidebar {
+      padding-top: 15px;
+    }
+  
+    .sidebar a {
+      font-size: 18px;
+    }
+  }
+   
+

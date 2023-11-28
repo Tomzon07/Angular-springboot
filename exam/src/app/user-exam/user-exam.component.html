@@ -1,0 +1,45 @@
+<app-uheader></app-uheader>
+<br>
+<br><br>
+<br>
+
+<div class="backgr">
+
+  
+<mat-card style="position: fixed; margin-top: -130px; background-color: rgb(240, 240, 240);" >
+
+    <h1> EXAMS </h1>
+</mat-card>
+
+<div class="cardflex">
+
+<div class="gap" style="margin-top: 100px;" *ngFor="let exam of exams">
+
+<div class="card transition" >
+    <h2 class="transition">{{exam.name}}<br><small>{{exam.description}}</small></h2>
+    <div class="cta-container transition"><a routerLink="/instructions/{{exam.examId}}" (click)="setExamId(exam.examId)" class="cta">Start</a></div>
+    
+    <!-- <div class="cta-container transition"><a routerLink="/userQuestionList/{{exam.examId}}" class="cta">Start</a></div>
+     -->
+
+    <div class="card_circle transition"></div>
+</div>  
+</div>
+<br>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+</div>
+
+	<!-- <app-footer></app-footer> -->
+  
